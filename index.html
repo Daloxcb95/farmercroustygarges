@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Farmer Crousty — Poulet croustillant Halal · Garges-lès-Gonesse</title>
-  <meta name="description" content="Farmer Crousty, rôtisserie et crousty 100 % Halal à la gare de Garges-Sarcelles. 5/5 sur 48 avis. Ouvert 7h–minuit, non-stop." />
+  <title>Farmer Crousty — Rôtisserie Halal · Garges-lès-Gonesse</title>
+  <meta name="description" content="Farmer Crousty, rôtisserie 100 % Halal à la gare de Garges-Sarcelles. Menus dès 7 €. 5/5 sur 48 avis. Ouvert 7h–minuit, non-stop." />
   <meta name="theme-color" content="#120c08" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -61,7 +61,8 @@
     .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
     .strip { border-block: 1px solid var(--line); background: var(--surface); }
     .strip-grid { display: grid; gap: 24px; padding: 32px 16px; }
-    @media (min-width: 800px) { .strip-grid { grid-template-columns: repeat(4, 1fr); } .links { display: flex; } .burger { display: none; } }
+    @media (min-width: 800px) { .strip-grid { grid-template-columns: repeat(4, 1fr); } .links { display: flex; } .burger { display: none; } .cards.two { grid-template-columns: repeat(2, 1fr); } .cards.four { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1100px) { .cards.four { grid-template-columns: repeat(4, 1fr); } }
     @media (max-width: 799px) {
       .links { display: none; }
       .links.open { display: flex; flex-direction: column; position: absolute; left: 0; right: 0; top: 64px; background: var(--bg); padding: 16px; border-bottom: 1px solid var(--line); }
@@ -114,15 +115,15 @@
   </header>
 
   <section class="hero" id="top">
-    <img src="food/hero.jpg" alt="Bowl Farmer Crousty : riz, poulet pané et sauces" />
+    <img src="food/hero.jpg" alt="Poulet entier rôti Farmer Crousty" />
     <div class="hero-inner">
       <div class="pills">
         <span class="pill" id="openpill">Ouvert 07:00 – 00:00</span>
         <span class="pill">100 % Halal · AVS & Achahada</span>
         <span class="pill">5,0 / 5 · 48 avis</span>
       </div>
-      <h1>Le feu,<br />le croustillant,<br />la dalle.</h1>
-      <p class="lead">Poulet & Co · Gare Garges-Sarcelles. Poulet rôti et barquettes crousty, ouverts 07:00 – 00:00, non-stop tous les jours.</p>
+      <h1>Le feu,<br />le rôti,<br />la dalle.</h1>
+      <p class="lead">Poulet & Co · Gare Garges-Sarcelles. Poulet grillé 100 % Halal, menus dès 7 €. Ouvert 07:00 – 00:00, non-stop tous les jours.</p>
       <div class="cta">
         <a class="btn btn-gold" href="#carte">Voir la carte</a>
         <a class="btn btn-ghost" href="https://www.instagram.com/farmer_crousty/" target="_blank" rel="noreferrer">Instagram</a>
@@ -142,71 +143,81 @@
   <section id="carte">
     <div class="wrap">
       <p class="kicker">La carte</p>
-      <h2>Barquettes & rôtisserie</h2>
-      <p class="muted">Prix indicatifs, dans l’esprit Farmer Crousty. La carte du jour se confirme sur place.</p>
-      <h3 style="margin-top:40px;font-size:32px;color:var(--gold);">Les Croustys</h3>
-      <div class="cards three">
+      <h2>Les menus & la rôtisserie</h2>
+      <p class="muted">Prix de la carte affichée en boutique. Chaque menu = 1 accompagnement + 1 boisson.</p>
+
+      <h3 style="margin-top:40px;font-size:32px;color:var(--gold);">Les menus</h3>
+      <div class="cards four">
         <article class="card">
-          <img src="food/hero.jpg" alt="Farmer Original" />
+          <img src="food/pilons.jpg" alt="Menu 3 pilons ou 4 ailes" />
           <div class="pad">
-            <p class="tag">Signature</p>
-            <div class="row"><h3>Farmer Original</h3><span class="price">12,90 €</span></div>
-            <p class="muted">Riz moelleux, poulet pané maison, sauce crousty, oignons frits et ciboulette.</p>
+            <p class="tag">Menu</p>
+            <div class="row"><h3>3 pilons ou 4 ailes</h3><span class="price">7,00 €</span></div>
+            <p class="muted">1 accompagnement + 1 boisson</p>
           </div>
         </article>
         <article class="card">
-          <img src="food/spicy.jpg" alt="Spicy Crousty" />
+          <img src="food/cuisse.jpg" alt="Menu 1 cuisse" />
           <div class="pad">
-            <p class="tag">Piquant</p>
-            <div class="row"><h3>Spicy Crousty</h3><span class="price">12,90 €</span></div>
-            <p class="muted">Version piquante : panure relevée, double sauce Tasty & Thaï, oignons croustillants.</p>
+            <p class="tag">Menu</p>
+            <div class="row"><h3>1 cuisse</h3><span class="price">7,00 €</span></div>
+            <p class="muted">1 accompagnement + 1 boisson</p>
           </div>
         </article>
         <article class="card">
-          <img src="food/sweet.jpg" alt="Sweet Crousty" />
+          <img src="food/hero.jpg" alt="Menu demi-poulet" />
           <div class="pad">
-            <p class="tag">Sucré-salé</p>
-            <div class="row"><h3>Sweet Crousty</h3><span class="price">12,90 €</span></div>
-            <p class="muted">Glaçage miel épicé, sauce sucrée caramélisée, riz parfumé, oignons frits.</p>
+            <p class="tag">Le plus copieux</p>
+            <div class="row"><h3>½ poulet</h3><span class="price">9,00 €</span></div>
+            <p class="muted">1 accompagnement + 1 boisson</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="food/escalope.jpg" alt="Menu escalope marinée" />
+          <div class="pad">
+            <p class="tag">Menu</p>
+            <div class="row"><h3>Escalope marinée</h3><span class="price">8,00 €</span></div>
+            <p class="muted">1 accompagnement + 1 boisson</p>
           </div>
         </article>
       </div>
 
-      <div class="grid3" style="margin-top:40px;">
-        <article class="card">
-          <img class="thumb" src="food/roti.jpg" alt="Poulet rôti" />
-          <div class="pad">
-            <h3>Rôtisserie</h3>
-            <ul class="plain">
-              <li class="row"><span>Poulet entier rôti</span><span class="price">13,90 €</span></li>
-              <li class="row"><span>Demi-poulet</span><span class="price">8,90 €</span></li>
-              <li class="row"><span>Quart de poulet</span><span class="price">5,90 €</span></li>
-            </ul>
+      <div class="grid3" style="margin-top:40px;grid-template-columns:1fr;">
+        <div style="display:grid;gap:20px;">
+          <div class="cards two" style="margin-top:0;">
+            <article class="card">
+              <img class="thumb" src="food/roti.jpg" alt="Poulet à la carte" />
+              <div class="pad">
+                <h3>À la carte</h3>
+                <ul class="plain">
+                  <li class="row"><span>Poulet entier</span><span class="price">8,50 €</span></li>
+                  <li class="row"><span>Demi poulet</span><span class="price">4,50 €</span></li>
+                  <li class="row"><span>4 cuisses</span><span class="price">10,00 €</span></li>
+                  <li class="row"><span>Cuisse</span><span class="price">2,50 €</span></li>
+                  <li class="row"><span>3 pilons</span><span class="price">3,50 €</span></li>
+                  <li class="row"><span>Escalope marinée</span><span class="price">3,50 €</span></li>
+                  <li class="row"><span>Donut cheese poulet</span><span class="price">2,00 €</span></li>
+                </ul>
+              </div>
+            </article>
+            <article class="card">
+              <img class="thumb" src="food/donut.jpg" alt="Accompagnements" />
+              <div class="pad">
+                <h3>Accompagnements</h3>
+                <p class="muted">Inclus au choix dans chaque menu.</p>
+                <ul class="plain">
+                  <li>Frites</li>
+                  <li>Riz</li>
+                  <li>Pommes de terre sautées</li>
+                  <li>Haricots verts</li>
+                  <li>Pâtes</li>
+                  <li>Salade</li>
+                </ul>
+                <p class="muted" style="margin-top:16px;">100 % Halal · AVS</p>
+              </div>
+            </article>
           </div>
-        </article>
-        <article class="card">
-          <img class="thumb" src="food/tenders.jpg" alt="Tenders" />
-          <div class="pad">
-            <h3>Côtés</h3>
-            <ul class="plain">
-              <li class="row"><span>Tenders × 5</span><span class="price">6,90 €</span></li>
-              <li class="row"><span>Tenders × 8</span><span class="price">9,90 €</span></li>
-              <li class="row"><span>Frites</span><span class="price">3,50 €</span></li>
-              <li class="row"><span>Extra oignons frits</span><span class="price">1,50 €</span></li>
-            </ul>
-          </div>
-        </article>
-        <article class="card" style="background:var(--raised);">
-          <div class="pad">
-            <h3>Boissons & menus</h3>
-            <ul class="plain">
-              <li class="row"><span>Canette</span><span class="price">2,00 €</span></li>
-              <li class="row"><span>Eau 50 cl</span><span class="price">1,50 €</span></li>
-              <li class="row"><span>Menu double + 2 boissons</span><span class="price">27,00 €</span></li>
-            </ul>
-            <p class="muted" style="margin-top:16px;">Sauces : blanche, curry, algérienne, sweet chili, samouraï.</p>
-          </div>
-        </article>
+        </div>
       </div>
     </div>
   </section>

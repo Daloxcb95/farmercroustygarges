@@ -1,9 +1,10 @@
 # Farmer Crousty — Garges-lès-Gonesse
 
-Site vitrine du restaurant **Farmer Crousty** (Gare Garges-Sarcelles) : crousty, rôtisserie 100 % Halal, horaires, avis et itinéraire.
+Site vitrine de la **rôtisserie Farmer Crousty** (Gare Garges-Sarcelles) : menus, poulet à la carte, horaires, avis et itinéraire.
 
 **Site :** https://daloxcb95.github.io/farmercroustygarges/
 
 - Adresse : 2 Av. du Général de Gaulle, 95140 Garges-lès-Gonesse  
 - Horaires : 07:00 – 00:00 non-stop  
 - Instagram : [@farmer_crousty](https://www.instagram.com/farmer_crousty/)
+- Carte : menus dès 7 € · poulet entier 8,50 € · 100 % Halal AVS
