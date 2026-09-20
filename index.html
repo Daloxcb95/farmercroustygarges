@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Farmer Crousty — Poulet croustillant Halal · Garges-lès-Gonesse</title>
+  <meta name="description" content="Farmer Crousty, rôtisserie et crousty 100 % Halal à la gare de Garges-Sarcelles. 5/5 sur 48 avis. Ouvert 7h–minuit, non-stop." />
+  <meta name="theme-color" content="#120c08" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #120c08;
+      --surface: #1c1410;
+      --raised: #271c16;
+      --fg: #f4ece4;
+      --muted: #b9a89a;
+      --gold: #e8a317;
+      --gold-fg: #1a1108;
+      --chili: #d4451d;
+      --line: #3a2a20;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: Figtree, system-ui, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    img { max-width: 100%; display: block; }
+    h1,h2,h3 { font-family: "Bebas Neue", Impact, sans-serif; letter-spacing: .04em; text-wrap: balance; margin: 0; }
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 0 16px; }
+    header {
+      position: sticky; top: 0; z-index: 20;
+      background: color-mix(in srgb, var(--bg) 88%, transparent);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .brand { display: flex; gap: 10px; align-items: center; text-decoration: none; }
+    .mark { width: 36px; height: 36px; border-radius: 8px; background: var(--gold); color: var(--gold-fg); display: grid; place-items: center; font-family: "Bebas Neue", sans-serif; font-size: 18px; }
+    .sub { font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); }
+    .links { display: flex; gap: 28px; align-items: center; }
+    .links a { text-decoration: none; color: var(--muted); font-weight: 500; font-size: 14px; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; border-radius: 999px; padding: 12px 22px; font-weight: 600; text-decoration: none; border: 0; cursor: pointer; }
+    .btn-gold { background: var(--gold); color: var(--gold-fg); }
+    .btn-ghost { background: color-mix(in srgb, var(--surface) 70%, transparent); border: 1px solid var(--line); color: var(--fg); }
+    .hero { position: relative; min-height: 78vh; display: flex; align-items: flex-end; overflow: hidden; }
+    .hero img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, var(--bg), color-mix(in srgb, var(--bg) 55%, transparent) 45%, color-mix(in srgb, var(--bg) 20%, transparent)); }
+    .hero-inner { position: relative; padding: 110px 16px 56px; max-width: 1120px; margin: 0 auto; width: 100%; }
+    .pills { display: flex; flex-wrap: wrap; gap: 8px; }
+    .pill { border: 1px solid var(--line); background: color-mix(in srgb, var(--surface) 80%, transparent); border-radius: 999px; padding: 6px 12px; font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+    h1 { font-size: clamp(48px, 9vw, 96px); line-height: .9; margin-top: 20px; }
+    .lead { max-width: 520px; font-size: 18px; color: color-mix(in srgb, var(--fg) 90%, transparent); }
+    .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    .strip { border-block: 1px solid var(--line); background: var(--surface); }
+    .strip-grid { display: grid; gap: 24px; padding: 32px 16px; }
+    @media (min-width: 800px) { .strip-grid { grid-template-columns: repeat(4, 1fr); } .links { display: flex; } .burger { display: none; } }
+    @media (max-width: 799px) {
+      .links { display: none; }
+      .links.open { display: flex; flex-direction: column; position: absolute; left: 0; right: 0; top: 64px; background: var(--bg); padding: 16px; border-bottom: 1px solid var(--line); }
+    }
+    .burger { width: 44px; height: 44px; border: 1px solid var(--line); background: transparent; color: var(--fg); border-radius: 8px; }
+    section { padding: 64px 0; }
+    .kicker { color: var(--gold); font-size: 13px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
+    h2 { font-size: clamp(36px, 6vw, 52px); margin-top: 8px; }
+    .muted { color: var(--muted); }
+    .cards { display: grid; gap: 20px; margin-top: 20px; }
+    @media (min-width: 800px) { .cards.three { grid-template-columns: repeat(3, 1fr); } }
+    .card { background: var(--surface); border: 1px solid var(--line); border-radius: 20px; overflow: hidden; }
+    .card img { aspect-ratio: 4/3; width: 100%; object-fit: cover; }
+    .card .pad, .pad { padding: 20px; }
+    .row { display: flex; justify-content: space-between; gap: 12px; }
+    .price { color: var(--gold); font-weight: 700; white-space: nowrap; }
+    .tag { color: var(--chili); font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+    .grid3 { display: grid; gap: 20px; }
+    @media (min-width: 900px) { .grid3 { grid-template-columns: repeat(3, 1fr); } }
+    .thumb { height: 160px; width: 100%; object-fit: cover; }
+    ul.plain { list-style: none; padding: 0; margin: 16px 0 0; }
+    ul.plain li { padding: 12px 0; border-bottom: 1px solid var(--line); }
+    .avis { background: var(--surface); border-block: 1px solid var(--line); }
+    .stars { color: var(--gold); letter-spacing: 2px; }
+    blockquote { margin: 0; background: var(--bg); border: 1px solid var(--line); border-radius: 20px; padding: 20px; }
+    .visit { display: grid; gap: 32px; }
+    @media (min-width: 900px) { .visit { grid-template-columns: 1fr 1fr; } }
+    iframe { width: 100%; height: 100%; min-height: 320px; border: 0; border-radius: 20px; border: 1px solid var(--line); }
+    footer { border-top: 1px solid var(--line); padding: 32px 0; color: var(--muted); font-size: 14px; display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#top">
+        <span class="mark">FC</span>
+        <span>
+          <strong style="font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:.06em;">Farmer Crousty</strong><br />
+          <span class="sub">Garges-Sarcelles</span>
+        </span>
+      </a>
+      <nav class="links" id="menu">
+        <a href="#carte">Carte</a>
+        <a href="#avis">Avis</a>
+        <a href="#venir">Venir</a>
+        <a class="btn btn-gold" href="https://www.google.com/maps/search/?api=1&query=2%20Avenue%20du%20G%C3%A9n%C3%A9ral%20de%20Gaulle%2C%2095140%20Garges-l%C3%A8s-Gonesse" target="_blank" rel="noreferrer">Itinéraire</a>
+      </nav>
+      <button class="burger" type="button" aria-label="Menu" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
+    </div>
+  </header>
+
+  <section class="hero" id="top">
+    <img src="food/hero.jpg" alt="Bowl Farmer Crousty : riz, poulet pané et sauces" />
+    <div class="hero-inner">
+      <div class="pills">
+        <span class="pill" id="openpill">Ouvert 07:00 – 00:00</span>
+        <span class="pill">100 % Halal · AVS & Achahada</span>
+        <span class="pill">5,0 / 5 · 48 avis</span>
+      </div>
+      <h1>Le feu,<br />le croustillant,<br />la dalle.</h1>
+      <p class="lead">Poulet & Co · Gare Garges-Sarcelles. Poulet rôti et barquettes crousty, ouverts 07:00 – 00:00, non-stop tous les jours.</p>
+      <div class="cta">
+        <a class="btn btn-gold" href="#carte">Voir la carte</a>
+        <a class="btn btn-ghost" href="https://www.instagram.com/farmer_crousty/" target="_blank" rel="noreferrer">Instagram</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="strip">
+    <div class="wrap strip-grid">
+      <div><strong>Halal certifié</strong><div class="muted">AVS & Achahada</div></div>
+      <div><strong>Non-stop</strong><div class="muted">07:00 – 00:00</div></div>
+      <div><strong>Note Google</strong><div class="muted">5/5 · 48 avis</div></div>
+      <div><strong>En gare</strong><div class="muted">Garges-Sarcelles</div></div>
+    </div>
+  </div>
+
+  <section id="carte">
+    <div class="wrap">
+      <p class="kicker">La carte</p>
+      <h2>Barquettes & rôtisserie</h2>
+      <p class="muted">Prix indicatifs, dans l’esprit Farmer Crousty. La carte du jour se confirme sur place.</p>
+      <h3 style="margin-top:40px;font-size:32px;color:var(--gold);">Les Croustys</h3>
+      <div class="cards three">
+        <article class="card">
+          <img src="food/hero.jpg" alt="Farmer Original" />
+          <div class="pad">
+            <p class="tag">Signature</p>
+            <div class="row"><h3>Farmer Original</h3><span class="price">12,90 €</span></div>
+            <p class="muted">Riz moelleux, poulet pané maison, sauce crousty, oignons frits et ciboulette.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="food/spicy.jpg" alt="Spicy Crousty" />
+          <div class="pad">
+            <p class="tag">Piquant</p>
+            <div class="row"><h3>Spicy Crousty</h3><span class="price">12,90 €</span></div>
+            <p class="muted">Version piquante : panure relevée, double sauce Tasty & Thaï, oignons croustillants.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="food/sweet.jpg" alt="Sweet Crousty" />
+          <div class="pad">
+            <p class="tag">Sucré-salé</p>
+            <div class="row"><h3>Sweet Crousty</h3><span class="price">12,90 €</span></div>
+            <p class="muted">Glaçage miel épicé, sauce sucrée caramélisée, riz parfumé, oignons frits.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="grid3" style="margin-top:40px;">
+        <article class="card">
+          <img class="thumb" src="food/roti.jpg" alt="Poulet rôti" />
+          <div class="pad">
+            <h3>Rôtisserie</h3>
+            <ul class="plain">
+              <li class="row"><span>Poulet entier rôti</span><span class="price">13,90 €</span></li>
+              <li class="row"><span>Demi-poulet</span><span class="price">8,90 €</span></li>
+              <li class="row"><span>Quart de poulet</span><span class="price">5,90 €</span></li>
+            </ul>
+          </div>
+        </article>
+        <article class="card">
+          <img class="thumb" src="food/tenders.jpg" alt="Tenders" />
+          <div class="pad">
+            <h3>Côtés</h3>
+            <ul class="plain">
+              <li class="row"><span>Tenders × 5</span><span class="price">6,90 €</span></li>
+              <li class="row"><span>Tenders × 8</span><span class="price">9,90 €</span></li>
+              <li class="row"><span>Frites</span><span class="price">3,50 €</span></li>
+              <li class="row"><span>Extra oignons frits</span><span class="price">1,50 €</span></li>
+            </ul>
+          </div>
+        </article>
+        <article class="card" style="background:var(--raised);">
+          <div class="pad">
+            <h3>Boissons & menus</h3>
+            <ul class="plain">
+              <li class="row"><span>Canette</span><span class="price">2,00 €</span></li>
+              <li class="row"><span>Eau 50 cl</span><span class="price">1,50 €</span></li>
+              <li class="row"><span>Menu double + 2 boissons</span><span class="price">27,00 €</span></li>
+            </ul>
+            <p class="muted" style="margin-top:16px;">Sauces : blanche, curry, algérienne, sweet chili, samouraï.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="avis" id="avis">
+    <div class="wrap">
+      <p class="kicker">Avis Google</p>
+      <h2>5,0 / 5 · 48 avis</h2>
+      <div class="cards three" style="margin-top:32px;">
+        <blockquote>
+          <div class="stars">★★★★★</div>
+          <p>Franchement rien à dire, expérience au top du début à la fin. L’accueil est exceptionnel, l’équipe est super souriante, à l’écoute et met directement à l’aise.</p>
+          <footer class="muted">Inaya Elhendouz · il y a 2 mois</footer>
+        </blockquote>
+        <blockquote>
+          <div class="stars">★★★★★</div>
+          <p>Qualité de nourriture incroyable, c’est devenu mon fast-food préféré. Personnel extrêmement chaleureux et gentil.</p>
+          <footer class="muted">Nayla Benaissa · il y a 2 mois</footer>
+        </blockquote>
+        <blockquote>
+          <div class="stars">★★★★★</div>
+          <p>Excellent. Poulet croustillant, tendre et plein de saveur. Service rapide, personnel très accueillant et restaurant propre. Je recommande vivement.</p>
+          <footer class="muted">Yas Dan · il y a 2 mois</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section id="venir">
+    <div class="wrap visit">
+      <div>
+        <p class="kicker">Nous trouver</p>
+        <h2>En gare, jusqu’à minuit</h2>
+        <p><strong>2 Av. du Général de Gaulle</strong><br />95140 Garges-lès-Gonesse<br /><span class="muted">Gare de Garges-Sarcelles · Avenue Anatole France</span></p>
+        <p><strong>07:00 – 00:00</strong><br /><span class="muted">Non-stop, tous les jours</span></p>
+        <p><a href="https://www.instagram.com/farmer_crousty/" target="_blank" rel="noreferrer">@farmer_crousty</a></p>
+        <div class="cta">
+          <a class="btn btn-gold" href="https://www.google.com/maps/search/?api=1&query=2%20Avenue%20du%20G%C3%A9n%C3%A9ral%20de%20Gaulle%2C%2095140%20Garges-l%C3%A8s-Gonesse" target="_blank" rel="noreferrer">Ouvrir Maps</a>
+          <a class="btn btn-ghost" href="https://www.instagram.com/farmer_crousty/" target="_blank" rel="noreferrer">Instagram</a>
+        </div>
+      </div>
+      <iframe title="Carte Farmer Crousty Garges" loading="lazy" src="https://maps.google.com/maps?q=2%20Avenue%20du%20G%C3%A9n%C3%A9ral%20de%20Gaulle%2C%2095140%20Garges-l%C3%A8s-Gonesse&z=16&output=embed"></iframe>
+    </div>
+  </section>
+
+  <footer class="wrap">
+    <span>© 2026 Farmer Crousty · Garges-lès-Gonesse</span>
+    <span>Restauration rapide · 100 % Halal</span>
+  </footer>
+  <script>
+    (function () {
+      var h = Number(new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/Paris", hour: "2-digit", hourCycle: "h23" }).formatToParts(new Date()).find(function (p) { return p.type === "hour"; }).value);
+      var el = document.getElementById("openpill");
+      if (el) el.textContent = (h >= 7 && h < 24) ? "Ouvert maintenant" : "Fermé · ouvre à 7h";
+    })();
+  </script>
+</body>
+</html>
